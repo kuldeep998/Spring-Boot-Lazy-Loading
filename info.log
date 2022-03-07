@@ -1,0 +1,6 @@
+DEBUG | 2022-03-07 12:18:55 | [main] code.SpringBootLazyInitializationApplication (SpringBootLazyInitializationApplication.java:18) - Log4jExample: A Sample Debug Message
+INFO  | 2022-03-07 12:18:55 | [main] code.SpringBootLazyInitializationApplication (SpringBootLazyInitializationApplication.java:19) - Log4jExample: A Sample Info  Message
+DEBUG | 2022-03-07 12:28:04 | [main] code.SpringBootLazyInitializationApplication (SpringBootLazyInitializationApplication.java:18) - Log4jExample: A Sample Debug Message
+INFO  | 2022-03-07 12:28:04 | [main] code.SpringBootLazyInitializationApplication (SpringBootLazyInitializationApplication.java:19) - Log4jExample: A Sample Info  Message
+DEBUG | 2022-03-07 15:35:30 | [main] code.SpringBootLazyInitializationApplication (SpringBootLazyInitializationApplication.java:18) - Log4jExample: A Sample Debug Message
+INFO  | 2022-03-07 15:35:30 | [main] code.SpringBootLazyInitializationApplication (SpringBootLazyInitializationApplication.java:19) - Log4jExample: A Sample Info  Message
