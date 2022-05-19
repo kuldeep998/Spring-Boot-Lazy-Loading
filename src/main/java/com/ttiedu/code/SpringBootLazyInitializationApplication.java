@@ -1,6 +1,6 @@
 package com.ttiedu.code;
 
-import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringBootLazyInitializationApplication {
 
-	private static Logger logger = Logger.getLogger(SpringBootLazyInitializationApplication.class);
+	// private static Logger logger =
+	// Logger.getLogger(SpringBootLazyInitializationApplication.class);
 
 	public static void main(String[] args) {
 		/*
@@ -22,7 +23,24 @@ public class SpringBootLazyInitializationApplication {
 		 * logger.error("Log4jExample: A Sample Error Message");
 		 * logger.fatal("Log4jExample: A Sample Fatal Message");
 		 */
-		SpringApplication.run(SpringBootLazyInitializationApplication.class, args);
+		// SpringApplication.run(SpringBootLazyInitializationApplication.class, args);
+
+		SpringApplication application = new SpringApplication(SpringBootLazyInitializationApplication.class);
+		// application.setBanner(Banner.class);
+		application.run(args);
+	}
+
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	@SuppressWarnings("deprecation")
+	@Required
+	public void setName(String name) {
+		System.out.println(" i am populated at Application Context Loading time");
+		this.name = name;
 	}
 
 	@Bean
@@ -31,7 +49,7 @@ public class SpringBootLazyInitializationApplication {
 	}
 
 	@Bean
-	@Lazy(false)   // set true if start with lazy loading
+	@Lazy(false) // set true if start with lazy loading
 	@GetMapping(value = "/")
 	public void customBean1() {
 		System.out.println("I am custom bean 2");
